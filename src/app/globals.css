@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Baikal Trial Extra';
+  src: url('../../public/fonts/BaikalTrial-ExtraLight.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Baikal Trial';
+  src: url('../../public/fonts/BaikalTrial-Black.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Baikal Trial Hairline';
+  src: url('../../public/fonts/BaikalTrial-Hairline.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Baikal Trial';
+  src: url('../../public/fonts/BaikalTrial-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Baikal Trial';
+  src: url('../../public/fonts/BaikalTrial-Thin.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Baikal Trial Semi';
+  src: url('../../public/fonts/BaikalTrial-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Baikal Trial';
+  src: url('../../public/fonts/BaikalTrial-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Baikal Trial';
+  src: url('../../public/fonts/BaikalTrial-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Baikal Trial';
+  src: url('../../public/fonts/BaikalTrial-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+:root {
+  --my-font-100: 'Baikal Trial Hairline', sans-serif;
+  --my-font-200: 'Baikal Trial Extra', sans-serif;
+  --my-font-300: 'Baikal Trial Light', sans-serif;
+  --my-font-400: 'Baikal Trial', sans-serif;
+  /* Regular */
+  --my-font-500: 'Baikal Trial Medium', sans-serif;
+  --my-font-600: 'Baikal Trial Semi', sans-serif;
+  --my-font-700: 'Baikal Trial Bold', sans-serif;
+  --my-font-900: 'Baikal Trial', sans-serif;
+}
+
+html {
+  font-size: 16px;
+  font-size: 100%;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: var(--my-font-400);
+
+
+}
+
+.container-fluid {
+  padding: 0 10rem;
+}
+
+nav {
+  height: 70px;
+  align-content: center;
+}
