@@ -5,15 +5,12 @@ import Link from "next/link";
 
 export default function Navbar() {
     return (
-        <nav>
+        <nav className="bg-white">
             <div className="container-fluid">
                 <div className="w-full flex justify-between items-center bg-white">
-                    {/* Logo */}
                     <div className="logo">
-                        <Link href="/">MA.</Link>
+                        <Link href="/"><span className="font-weight-500">MA.</span></Link>
                     </div>
-
-                    {/* Nav Links */}
                     <ul className="flex items-center justify-center">
                         <li>
                             <Link href="/" className="my-nav-link">
@@ -46,15 +43,8 @@ export default function Navbar() {
                             </Link>
                         </li>
                     </ul>
-
-                    {/* Button */}
                     <div>
-                        <Link
-                            href="/contact"
-                            className="bg-black text-white px-5 py-2 rounded-full hover:bg-gray-800 transition"
-                        >
-                            Let&apos;s Talk
-                        </Link>
+                        <Link href="/contact" className="btn1">Let&apos;s Talk</Link>
                     </div>
                 </div>
             </div>
