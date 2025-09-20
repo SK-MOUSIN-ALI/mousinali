@@ -110,3 +110,6 @@ nav {
   height: 70px;
   align-content: center;
 }
+nav ul {
+  gap: 10px;
+}
