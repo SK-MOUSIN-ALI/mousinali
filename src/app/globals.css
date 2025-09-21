@@ -76,7 +76,7 @@
 :root {
   --primary-color: #000;
   --white-color: #fff;
-
+  --my-font: "Onest", sans-serif;
 
 
 
@@ -100,7 +100,7 @@ html,
 body {
   width: 100%;
   height: 100%;
-  font-family: 'Baikal Trial';
+  font-family: 'Baikal VAR';
 }
 
 .font-weight-100 {
@@ -135,28 +135,62 @@ body {
   font-weight: 900 !important;
 }
 
+.section-padding {
+  padding: 80px 0;
+}
+.my-font {
+  font-family: var(--my-font) !important;
+}
 .btn1 {
-  display: inline-block;
-  padding: 0.65rem 2rem;
-  background: var(--primary-color);
+  background: #000;
   color: var(--white-color);
-  font-weight: 500;
   font-size: 0.875rem;
+  font-weight: 500;
   border-radius: 50vw;
-  letter-spacing: 0.5px;
-  min-width: 132px;
-  border: 1px solid var(--primary-color);
-  transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  padding: 0.8rem 2.85rem 0.8rem 1.25rem;
+  cursor: pointer;
+  line-height: 1;
 }
-.btn1:hover {
-  background-color: var(--white-color);
+
+.btn1 .icon {
+  background: var(--white-color);
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 50%;
+  right: 0.3em;
+  transition: all 0.3s;
+}
+
+.btn1:hover .icon {
+  width: calc(100% - 0.6em);
+  height: calc(100% - 0.6em);
+  border-radius: 50vw;
+}
+
+.btn1 .icon svg {
+  width: 1.1em;
+  transition: transform 0.3s;
   color: var(--primary-color);
+  border-radius: 0.5rem;
 }
 
+.btn1:hover .icon svg {
+  transform: translateX(0.1em);
+}
 
-/* body {
-  font-family: var(--my-font-400);
-} */
+.btn1:active .icon {
+  transform: scale(0.95);
+}
 
 .container-fluid {
   padding: 0 14.5rem;
@@ -167,9 +201,11 @@ nav {
   align-content: center;
   border-bottom: 1px solid #CFCFCF;
 }
+
 nav .logo {
   min-width: 132px;
 }
+
 nav .logo span {
   font-size: 2rem;
 }
@@ -198,28 +234,91 @@ nav ul li .my-nav-link:hover::before {
 nav ul li .my-nav-link:hover {
   color: var(--primary-color);
 }
+
 .hero {
-  height: calc(100vh - 70px);
+  /* height: calc(100vh - 70px); */
+  padding: 3.5rem 0;
 }
+
 .hero h5 {
   font-size: 28px;
   margin-bottom: 1rem;
 }
+
 .hero h1 {
   font-size: 55px;
   line-height: 74px;
   margin-bottom: 1.5rem;
 }
+
 .hero p {
   font-size: 20px;
   line-height: 2rem;
   margin-bottom: 2.025rem;
 }
+
 .hero .avail {
   display: inline-block;
-  padding: 0.75rem 1.5rem ;
+  padding: 0.8rem 1.5rem;
   background-color: rgba(40, 199, 111, 0.14);
   color: #03823C;
   border-radius: 50vw;
   font-size: 0.875rem;
+  line-height: 1;
+}
+
+.about h2 {
+  font-size: 38px;
+  line-height: 48px;
+  margin-bottom: 2rem;
+}
+
+.about p {
+  font-size: 1.25rem;
+  line-height: 2.25rem;
+  margin-bottom: 2.5rem;
+}
+
+.fade-container {
+  top: 0;
+}
+
+.fade-title-padd {
+  padding-top: 14em;
+  padding-bottom: 5rem;
+}
+
+.fade-title {
+  font-size: 300px;
+  line-height: 1;
+  position: absolute;
+  z-index: 1;
+  top: 3%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
+}
+
+.portfolio .pro-content {
+  padding: 1.75rem 2rem;
+  padding-top: 1.5rem;
+}
+
+.portfolio .pro-content h3 {
+  font-size: 26px;
+  margin-bottom: 0.5rem;
+}
+
+.portfolio .pro-content p {
+  margin-bottom: 1.5rem;
+  line-height: 26px;
+}
+
+.my-badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+  border: 1px solid #E9E9E9;
+  background: linear-gradient(to bottom, #EEEEEE 0%, #e2e2e2c9 100%);
+  border-radius: 50vw;
 }
