@@ -138,9 +138,11 @@ body {
 .section-padding {
   padding: 80px 0;
 }
+
 .my-font {
   font-family: var(--my-font) !important;
 }
+
 .btn1 {
   background: #000;
   color: var(--white-color);
@@ -188,10 +190,6 @@ body {
 
 .btn1:hover .icon svg {
   transform: translateX(0.1em);
-}
-
-.btn1:active .icon {
-  transform: scale(0.95);
 }
 
 .container-fluid {
