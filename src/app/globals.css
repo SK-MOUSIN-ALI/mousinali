@@ -1,45 +1,18 @@
 @import "tailwindcss";
 @font-face {
     font-family: 'Baikal Trial';
-    src: url('../../public/fonts/BaikalTrial-Bold.woff2') format('woff2'),
-        url('../../public/fonts/BaikalTrial-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Baikal Trial';
-    src: url('../../public/fonts/BaikalTrial-Black.woff2') format('woff2'),
-        url('../../public/fonts/BaikalTrial-Black.woff') format('woff');
-    font-weight: 900;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Baikal Trial Extra';
-    src: url('../../public/fonts/BaikalTrial-ExtraLight.woff2') format('woff2'),
-        url('../../public/fonts/BaikalTrial-ExtraLight.woff') format('woff');
-    font-weight: 200;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Baikal Trial Hairline';
-    src: url('../../public/fonts/BaikalTrial-Hairline.woff2') format('woff2'),
-        url('../../public/fonts/BaikalTrial-Hairline.woff') format('woff');
-    font-weight: 100;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Baikal Trial';
     src: url('../../public/fonts/BaikalTrial-Light.woff2') format('woff2'),
         url('../../public/fonts/BaikalTrial-Light.woff') format('woff');
     font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Baikal Trial';
+    src: url('../../public/fonts/BaikalTrial-Bold.woff2') format('woff2'),
+        url('../../public/fonts/BaikalTrial-Bold.woff') format('woff');
+    font-weight: bold;
     font-style: normal;
     font-display: swap;
 }
@@ -55,15 +28,6 @@
 
 @font-face {
     font-family: 'Baikal Trial';
-    src: url('../../public/fonts/BaikalTrial-Thin.woff2') format('woff2'),
-        url('../../public/fonts/BaikalTrial-Thin.woff') format('woff');
-    font-weight: 100;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Baikal Trial';
     src: url('../../public/fonts/BaikalTrial-Regular.woff2') format('woff2'),
         url('../../public/fonts/BaikalTrial-Regular.woff') format('woff');
     font-weight: normal;
@@ -72,7 +36,7 @@
 }
 
 @font-face {
-    font-family: 'Baikal Trial Semi';
+    font-family: 'Baikal Trial';
     src: url('../../public/fonts/BaikalTrial-SemiBold.woff2') format('woff2'),
         url('../../public/fonts/BaikalTrial-SemiBold.woff') format('woff');
     font-weight: 600;
@@ -80,25 +44,13 @@
     font-display: swap;
 }
 
-
 :root {
   --primary-color: #000;
   --white-color: #fff;
   --my-font: "Onest", sans-serif;
 
 
-
-  /* Font */
-  --my-font-100: 'Baikal Trial Hairline', sans-serif;
-  --my-font-200: 'Baikal Trial Extra', sans-serif;
-  --my-font-300: 'Baikal Trial Light', sans-serif;
-  --my-font-400: 'Baikal Trial', sans-serif;
-  --my-font-500: 'Baikal Trial Medium', sans-serif;
-  --my-font-600: 'Baikal Trial Semi', sans-serif;
-  --my-font-700: 'Baikal Trial Bold', sans-serif;
-  --my-font-900: 'Baikal Trial', sans-serif;
 }
-
 html {
   font-size: 16px;
   font-size: 100%;
@@ -108,7 +60,7 @@ html,
 body {
   width: 100%;
   height: 100%;
-  font-family: 'Baikal VAR';
+  font-family: 'Baikal Trial';
 }
 
 .font-weight-100 {
