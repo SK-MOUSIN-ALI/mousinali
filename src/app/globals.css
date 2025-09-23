@@ -244,7 +244,7 @@ nav ul li .my-nav-link:hover {
 }
 
 .fade-title-padd {
-  padding-top: 14em;
+  padding-top: 14rem;
   padding-bottom: 5rem;
 }
 
@@ -253,7 +253,7 @@ nav ul li .my-nav-link:hover {
   line-height: 1;
   position: absolute;
   z-index: 1;
-  top: 3%;
+  top: 1%;
   left: 50%;
   transform: translateX(-50%);
   display: inline-block;

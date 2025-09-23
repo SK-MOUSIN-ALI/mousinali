@@ -1,6 +1,6 @@
 import Navbar from "../components/Navbar";
 import "./globals.css";
-
+import LenisProvider from "./providers/LenisProvider";
 
 export const metadata = {
   title: "My Portfolio",
@@ -13,8 +13,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body cz-shortcut-listen="true">
-        <Navbar/>
-        {children}
+
+        <LenisProvider>
+          <Navbar />
+          {children}
+        </LenisProvider>
       </body>
     </html>
   );
