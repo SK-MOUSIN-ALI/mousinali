@@ -67,6 +67,24 @@ export default function Home() {
           start: "top 70%",
         },
       });
+
+      /** ----------------
+       * PORTFOLIO ANIMATION (3D perspective)
+       * ---------------- */
+      gsap.from(".portfolio .inner-contain", {
+        opacity: 0,
+        rotateY: -70, 
+        rotateX: 15,
+        y: 100,
+        duration: 1.2,
+        ease: "power3.out",
+        stagger: 0.6,
+        scrollTrigger: {
+          trigger: ".portfolio",
+          start: "top 40%",
+          end: "bottom 80%",
+        },
+      });
     },
     { scope: pageRef }
   );
@@ -182,12 +200,13 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="portfolio bg-[#f8f8f8] relative fade-title-padd">
+        
+         <section className="portfolio bg-[#f8f8f8] relative fade-title-padd">
           <div className="container-fluid">
             <h1 className="fade-title font-weight-500 text-transparent bg-clip-text bg-gradient-to-b from-black/10 to-transparent">
               Portfolio
             </h1>
-            <div className="grid grid-cols-2 gap-8 gap-y-15 relative z-10">
+             <div className="grid grid-cols-2 gap-8 gap-y-15 relative z-10">
               <div className="inner-contain bg-white rounded-[1.25rem] overflow-hidden shadow-[0px_4px_20px_0px_rgba(0,0,0,0.06)]">
                 <div>
                   <Image
@@ -273,7 +292,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-
           </div>
         </section>
       </div>
