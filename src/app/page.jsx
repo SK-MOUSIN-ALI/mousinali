@@ -87,9 +87,8 @@ export default function Home() {
       });
 
       /** ----------------
-       * UI/UX SECTION (Sticky image + text scroll)
+       * Sticky image + text scroll
        * ---------------- */
-      // Animate left side text panels (fade-in on scroll)
 
 
       // Select all panels and images
@@ -123,7 +122,7 @@ export default function Home() {
 
   return (
     <>
-      <div ref={pageRef}>
+      <main ref={pageRef}>
         {/* ---------------- HERO ---------------- */}
         <section className="hero bg-[#F8F8F8] content-center">
           <div className="container-fluid">
@@ -374,32 +373,32 @@ export default function Home() {
               </div>
 
               {/* RIGHT SIDE STICKY IMAGES */}
-              <div className="w-1/2 sticky top-0 h-screen flex items-center justify-center overflow-hidden">
+              <div className="w-1/2 sticky top-0 h-screen flex items-center justify-center overflow-hidden rounded-xl">
                 {/* Square image container */}
                 <div className="relative w-[650px] h-[650px] rounded-xl overflow-hidden shadow-xl">
                   <Image
                     src="/portfolio/por-1.jpg"
                     alt="UI/UX"
                     fill
-                    className="uiux-sticky-img absolute object-cover"
+                    className="uiux-sticky-img absolute object-cover rounded-xl"
                   />
                   <Image
                     src="/portfolio/por-2.jpg"
                     alt="Web Design"
                     fill
-                    className="uiux-sticky-img absolute object-cover"
+                    className="uiux-sticky-img absolute object-cover rounded-xl"
                   />
                   <Image
                     src="/portfolio/por-3.jpg"
                     alt="Wireframing"
                     fill
-                    className="uiux-sticky-img absolute object-cover"
+                    className="uiux-sticky-img absolute object-cover rounded-xl"
                   />
                   <Image
                     src="/portfolio/por-4.jpg"
                     alt="App Development"
                     fill
-                    className="uiux-sticky-img absolute object-cover"
+                    className="uiux-sticky-img absolute object-cover rounded-xl"
                   />
                 </div>
               </div>
@@ -408,7 +407,7 @@ export default function Home() {
         </section>
 
 
-      </div>
+      </main>
     </>
   );
 }
