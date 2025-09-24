@@ -73,7 +73,7 @@ export default function Home() {
        * ---------------- */
       gsap.from(".portfolio .inner-contain", {
         opacity: 0,
-        rotateY: -70, 
+        rotateY: -70,
         rotateX: 15,
         y: 100,
         duration: 1.2,
@@ -85,6 +85,38 @@ export default function Home() {
           end: "bottom 80%",
         },
       });
+
+      /** ----------------
+       * UI/UX SECTION (Sticky image + text scroll)
+       * ---------------- */
+      // Animate left side text panels (fade-in on scroll)
+
+
+      // Select all panels and images
+      const panels = gsap.utils.toArray(".uiux-panel");
+      const images = gsap.utils.toArray(".uiux-sticky-img");
+
+      // Set initial state for images (all hidden below)
+      gsap.set(images, { yPercent: 100 });
+
+      panels.forEach((panel, i) => {
+        let img = images[i];
+
+        // When this panel comes into view → animate its image in
+        ScrollTrigger.create({
+          trigger: panel,
+          start: "top center",
+          end: "bottom center",
+          scrub: true,
+          onEnter: () => {
+            gsap.to(img, { yPercent: 0, duration: 1, ease: "power2.out" });
+          },
+          onLeaveBack: () => {
+            gsap.to(img, { yPercent: 100, duration: 1, ease: "power2.in" });
+          },
+        });
+      });
+
     },
     { scope: pageRef }
   );
@@ -200,13 +232,14 @@ export default function Home() {
             </div>
           </div>
         </section>
-        
-         <section className="portfolio bg-[#f8f8f8] relative fade-title-padd">
+
+        {/* ---------------- PORTFOLIO ---------------- */}
+        <section className="portfolio bg-[#f8f8f8] relative fade-title-padd">
           <div className="container-fluid">
             <h1 className="fade-title font-weight-500 text-transparent bg-clip-text bg-gradient-to-b from-black/10 to-transparent">
               Portfolio
             </h1>
-             <div className="grid grid-cols-2 gap-8 gap-y-15 relative z-10">
+            <div className="grid grid-cols-2 gap-8 gap-y-15 relative z-10">
               <div className="inner-contain bg-white rounded-[1.25rem] overflow-hidden shadow-[0px_4px_20px_0px_rgba(0,0,0,0.06)]">
                 <div>
                   <Image
@@ -294,6 +327,87 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* ---------------- SERVICES ---------------- */}
+        <section className="services">
+          <div className="container-fluid">
+            <div className="uiux-section relative flex">
+              {/* LEFT SIDE TEXT PANELS */}
+              <div className="w-1/2 space-y-[70vh] section-padding">
+                {/* Slide 1 */}
+                <div className="uiux-panel h-[50vh] flex flex-col justify-center">
+                  <h2>UI/UX Research & Design</h2>
+                  <p className="mt-6 text-xl text-gray-600 leading-relaxed">
+                    Focused on creating intuitive, user-friendly interfaces. Through research,
+                    wireframes, and prototypes, we deliver seamless navigation, modern aesthetics,
+                    and engaging digital experiences aligned with business goals.
+                  </p>
+                </div>
+
+                {/* Slide 2 */}
+                <div className="uiux-panel h-[50vh] flex flex-col justify-center">
+                  <h2>Web Design</h2>
+                  <p className="mt-6 text-xl text-gray-600 leading-relaxed">
+                    Crafting responsive, visually appealing websites optimized for performance,
+                    accessibility, and engagement across devices. Strong focus on branding and
+                    user interaction.
+                  </p>
+                </div>
+
+                {/* Slide 3 */}
+                <div className="uiux-panel h-[50vh] flex flex-col justify-center">
+                  <h2>Wireframing & Prototyping</h2>
+                  <p className="mt-6 text-xl text-gray-600 leading-relaxed">
+                    Building clear, interactive wireframes to visualize user journeys and
+                    prototyping solutions that validate design concepts before development.
+                  </p>
+                </div>
+
+                {/* Slide 4 */}
+                <div className="uiux-panel h-[100vh] flex flex-col justify-center">
+                  <h2>App Development</h2>
+                  <p className="mt-6 text-xl text-gray-600 leading-relaxed">
+                    Developing high-performance mobile and web applications with seamless UX,
+                    scalable architecture, and modern frameworks to meet business and user goals.
+                  </p>
+                </div>
+              </div>
+
+              {/* RIGHT SIDE STICKY IMAGES */}
+              <div className="w-1/2 sticky top-0 h-screen flex items-center justify-center overflow-hidden">
+                {/* Square image container */}
+                <div className="relative w-[650px] h-[650px] rounded-xl overflow-hidden shadow-xl">
+                  <Image
+                    src="/portfolio/por-1.jpg"
+                    alt="UI/UX"
+                    fill
+                    className="uiux-sticky-img absolute object-cover"
+                  />
+                  <Image
+                    src="/portfolio/por-2.jpg"
+                    alt="Web Design"
+                    fill
+                    className="uiux-sticky-img absolute object-cover"
+                  />
+                  <Image
+                    src="/portfolio/por-3.jpg"
+                    alt="Wireframing"
+                    fill
+                    className="uiux-sticky-img absolute object-cover"
+                  />
+                  <Image
+                    src="/portfolio/por-4.jpg"
+                    alt="App Development"
+                    fill
+                    className="uiux-sticky-img absolute object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
       </div>
     </>
   );

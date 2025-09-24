@@ -283,3 +283,9 @@ nav ul li .my-nav-link:hover {
   background: linear-gradient(to bottom, #EEEEEE 0%, #e2e2e2c9 100%);
   border-radius: 50vw;
 }
+
+.services h2 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  font-family: 'Baikal VAR';
+}
