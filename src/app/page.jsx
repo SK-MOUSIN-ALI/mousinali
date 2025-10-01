@@ -95,13 +95,14 @@ export default function Home() {
       const panels = gsap.utils.toArray(".uiux-panel");
       const images = gsap.utils.toArray(".uiux-sticky-img");
 
-      // Set initial state for images (all hidden below)
-      gsap.set(images, { yPercent: 100 });
+      // Hide all except the first image
+      gsap.set(images.slice(1), { yPercent: 100 });
 
+      // Loop through panels
       panels.forEach((panel, i) => {
         let img = images[i];
 
-        // When this panel comes into view → animate its image in
+        // For first panel → keep image visible, still allow scroll animations
         ScrollTrigger.create({
           trigger: panel,
           start: "top center",
@@ -111,10 +112,14 @@ export default function Home() {
             gsap.to(img, { yPercent: 0, duration: 1, ease: "power2.out" });
           },
           onLeaveBack: () => {
-            gsap.to(img, { yPercent: 100, duration: 1, ease: "power2.in" });
+            // Only hide if it's NOT the first image
+            if (i !== 0) {
+              gsap.to(img, { yPercent: 100, duration: 1, ease: "power2.in" });
+            }
           },
         });
       });
+
 
     },
     { scope: pageRef }
