@@ -1,47 +1,48 @@
 @import "tailwindcss";
+
 @font-face {
-    font-family: 'Baikal Trial';
-    src: url('../../public/fonts/BaikalTrial-Light.woff2') format('woff2'),
-        url('../../public/fonts/BaikalTrial-Light.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
+  font-family: 'Baikal Trial';
+  src: url('../../public/fonts/BaikalTrial-Light.woff2') format('woff2'),
+    url('../../public/fonts/BaikalTrial-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Baikal Trial';
-    src: url('../../public/fonts/BaikalTrial-Bold.woff2') format('woff2'),
-        url('../../public/fonts/BaikalTrial-Bold.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
+  font-family: 'Baikal Trial';
+  src: url('../../public/fonts/BaikalTrial-Bold.woff2') format('woff2'),
+    url('../../public/fonts/BaikalTrial-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Baikal Trial';
-    src: url('../../public/fonts/BaikalTrial-Medium.woff2') format('woff2'),
-        url('../../public/fonts/BaikalTrial-Medium.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-    font-display: swap;
+  font-family: 'Baikal Trial';
+  src: url('../../public/fonts/BaikalTrial-Medium.woff2') format('woff2'),
+    url('../../public/fonts/BaikalTrial-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Baikal Trial';
-    src: url('../../public/fonts/BaikalTrial-Regular.woff2') format('woff2'),
-        url('../../public/fonts/BaikalTrial-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+  font-family: 'Baikal Trial';
+  src: url('../../public/fonts/BaikalTrial-Regular.woff2') format('woff2'),
+    url('../../public/fonts/BaikalTrial-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: 'Baikal Trial';
-    src: url('../../public/fonts/BaikalTrial-SemiBold.woff2') format('woff2'),
-        url('../../public/fonts/BaikalTrial-SemiBold.woff') format('woff');
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
+  font-family: 'Baikal Trial';
+  src: url('../../public/fonts/BaikalTrial-SemiBold.woff2') format('woff2'),
+    url('../../public/fonts/BaikalTrial-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
 }
 
 :root {
@@ -51,6 +52,7 @@
 
 
 }
+
 html {
   font-size: 16px;
   font-size: 100%;
@@ -287,4 +289,29 @@ nav ul li .my-nav-link:hover {
 .services h2 {
   font-size: 2.5rem;
   font-weight: 500;
+  margin-bottom: 0;
+}
+
+.services p {
+  font-size: 1.125rem;
+  line-height: 2rem;
+  margin: 1.5rem 0;
+}
+
+.services li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.services li::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M12 22L8 18H16L12 22ZM12 2L16 6H8L12 2ZM12 14C10.8954 14 10 13.1046 10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12C14 13.1046 13.1046 14 12 14ZM2 12L6 8V16L2 12ZM22 12L18 16V8L22 12Z"/></svg>') no-repeat center;
+  background-size: contain;
 }
