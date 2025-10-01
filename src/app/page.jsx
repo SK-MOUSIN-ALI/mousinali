@@ -1,4 +1,3 @@
-
 "use client"
 import Image from "next/image";
 import Link from "next/link";
@@ -59,8 +58,8 @@ export default function Home() {
       gsap.from(".about-img", {
         y: 100,
         opacity: 0,
-        duration: 1.2,
-        stagger: 0.3,
+        duration: 1.4,
+        stagger: 0.5,
         ease: "power3.out",
         scrollTrigger: {
           trigger: ".about",
@@ -69,7 +68,7 @@ export default function Home() {
       });
 
       /** ----------------
-       * PORTFOLIO ANIMATION (3D perspective)
+       * PORTFOLIO ANIMATION
        * ---------------- */
       gsap.from(".portfolio .inner-contain", {
         opacity: 0,
@@ -236,9 +235,8 @@ export default function Home() {
             </div>
           </div>
         </section>
-
         {/* ---------------- PORTFOLIO ---------------- */}
-        <section className="portfolio bg-[#f8f8f8] relative fade-title-padd">
+         <section className="portfolio bg-[#f8f8f8] relative fade-title-padd">
           <div className="container-fluid">
             <h1 className="fade-title font-weight-500 text-transparent bg-clip-text bg-gradient-to-b from-black/10 to-transparent">
               Portfolio
