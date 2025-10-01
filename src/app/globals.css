@@ -105,6 +105,20 @@ body {
   font-family: var(--my-font) !important;
 }
 
+.custom-cursor {
+  width: 10px;
+  height: 10px;
+  background-color: #000;
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%) scale(0); 
+  pointer-events: none;
+  z-index: 1001;
+}
+
+
 .btn1 {
   background: #000;
   color: var(--white-color);
@@ -154,8 +168,10 @@ body {
   transform: translateX(0.1em);
 }
 
-.container-fluid {
-  padding: 0 14.5rem;
+@media (min-width: 1600px) {
+  .container-fluid {
+    padding: 0 14.5rem;
+  }
 }
 
 nav {
@@ -320,21 +336,23 @@ nav ul li .my-nav-link:hover {
   padding-top: 3rem;
   padding-bottom: 6rem;
 }
+
 .client-rev .fade-title {
   white-space: nowrap;
   font-size: 270px;
   top: 45%;
   left: 50%;
-  transform: translate(-50% , -50%);
+  transform: translate(-50%, -50%);
 }
+
 .client-rev .inner-contain:nth-child(even) {
- top: 4rem;
- position: relative;
+  top: 4rem;
+  position: relative;
 }
-.client-rev .inner-contain p{
+
+.client-rev .inner-contain p {
   font-size: 1.125rem;
   line-height: 1.75rem;
   color: #6b6b6b;
   margin-top: 3rem;
 }
-

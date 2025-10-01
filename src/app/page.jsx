@@ -124,7 +124,6 @@ export default function Home() {
        * ---------------- */
 
 
-      // Select all panels and images
       const panels = gsap.utils.toArray(".uiux-panel");
       const images = gsap.utils.toArray(".uiux-sticky-img");
       gsap.set(images.slice(1), { yPercent: 100 });
@@ -137,11 +136,11 @@ export default function Home() {
           end: "bottom center",
           scrub: true,
           onEnter: () => {
-            gsap.to(img, { yPercent: 0, duration: 1 });
+            gsap.to(img, { yPercent: 0, duration: 0.5 });
           },
           onLeaveBack: () => {
             if (i !== 0) {
-              gsap.to(img, { yPercent: 100, duration: 1 });
+              gsap.to(img, { yPercent: 100, duration: 0.5 });
             }
           },
         });
@@ -150,13 +149,10 @@ export default function Home() {
 
 
 
-
-
-      // Pin the section while animations run
       ScrollTrigger.create({
         trigger: ".client-rev",
         start: "top top",
-        end: "+=200%", // scroll space while pinned
+        end: "+=200%",
         pin: true,
         scrub: true,
       });
@@ -180,21 +176,15 @@ export default function Home() {
         y: 100,
         opacity: 0,
         duration: 1,
-        stagger: 0.3,
-        delay: 0.5, // wait a bit after heading animation
+        stagger: 0.4,
+        delay: 2,
         scrollTrigger: {
           trigger: ".client-rev .container-fluid",
-          start: "80% center+=100",
+          start: "90% center+=100",
           end: "+=100%",
           scrub: true,
         },
       });
-
-
-
-
-
-
 
 
     },
@@ -639,9 +629,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
-
-
 
 
       </main>
