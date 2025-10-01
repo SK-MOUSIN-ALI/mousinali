@@ -8,6 +8,40 @@ import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
+const feedbacks = [
+  {
+    name: "Moaz",
+    role: "CEO THINKTURKEY",
+    image: "/images/moaz.jpg",  // replace with your image paths or remote URLs
+    text: "Working with Faza and his team was an incredibly professional experience. Their dedication to excellence and customer service is at another level. They do endless revisions, and follow through on their promises. In addition their design sense, and quality of production is very high. Highly recommend working with them!"
+  },
+  {
+    name: "James",
+    role: "Founder LIVEMORE",
+    image: "/images/james.jpg",
+    text: "Faza & Hatypo Studio team is responsive and welcomes feedback to implement. They can improve interpretation of design briefs and attention to detail to avoid lengthy feedback loops. The team here can do a good job."
+  },
+  {
+    name: "Mohannad",
+    role: "CEO CACTIX",
+    image: "/images/mohannad.jpg",
+    text: "Faza is the best web designer I have ever cooperated with. His revise is very quick, and allows limitless revise if you are not satisfied. Highly recommend!"
+  },
+  {
+    name: "Obi Michael",
+    role: "Founder LUCIDBLACK.IO",
+    image: "/images/obi.jpg",
+    text: "Hatypo Studio revamped our website, making it beautiful and easy to use. Their attention to detail and collaboration made all the difference. We've seen great results since the launch!"
+  },
+  {
+    name: "Antonio",
+    role: "CEO SOLVENTLIFE",
+    image: "/images/antonio.jpg",
+    text: "Hatypo Studio truly captured our vision and turned it into a stunning brand. Their team was creative, responsive, and a pleasure to work with. We’re thrilled with the results!"
+  },
+];
+
+
 export default function Home() {
   const pageRef = useRef(null);
 
@@ -112,6 +146,55 @@ export default function Home() {
           },
         });
       });
+
+
+
+
+
+
+      // Pin the section while animations run
+      ScrollTrigger.create({
+        trigger: ".client-rev",
+        start: "top top",
+        end: "+=200%", // scroll space while pinned
+        pin: true,
+        scrub: true,
+      });
+
+      // Heading animation
+      gsap.from(".client-rev h2", {
+        xPercent: 100,
+        opacity: 0,
+        duration: 2,
+        scrollTrigger: {
+          trigger: ".client-rev h2",
+          start: "top center",
+          end: "bottom center",
+          scrub: 2,
+        },
+      });
+
+
+      // Cards animation (after heading)
+      gsap.from(".client-rev .inner-contain", {
+        y: 100,
+        opacity: 0,
+        duration: 1,
+        stagger: 0.3,
+        delay: 0.5, // wait a bit after heading animation
+        scrollTrigger: {
+          trigger: ".client-rev .container-fluid",
+          start: "80% center+=100",
+          end: "+=100%",
+          scrub: true,
+        },
+      });
+
+
+
+
+
+
 
 
     },
@@ -444,6 +527,121 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <section className="relative client-rev bg-[#F6F6F6] min-h-screen overflow-hidden">
+          <h2 className="fade-title font-weight-500 text-[#DFDFDF] whitespace-nowrap">
+            Testimonials
+          </h2>
+          <div className="container-fluid relative z-10">
+            <div className="grid grid-cols-4 gap-5 gap-y-10">
+              <div className="inner-contain bg-white p-7 rounded-md shadow">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h5>John Doe</h5>
+                    <small>UI/UX Designer</small>
+                  </div>
+                  <div>
+                    <Image src="/testi/quote.svg" alt="Quote" width={54} height={50} />
+                  </div>
+                </div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam, quis nesciunt sed facere possimus et velit debitis? Ratione ipsa eaque vel nobis ullam expedita nostrum vitae dolor, nam provident architecto.</p>
+              </div>
+
+              <div className="inner-contain bg-white p-7 rounded-md shadow">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h5>Jane Smith</h5>
+                    <small>Product Manager</small>
+                  </div>
+                  <div>
+                    <Image src="/testi/quote.svg" alt="Quote" width={54} height={50} />
+                  </div>
+                </div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam, quis nesciunt sed facere possimus et velit debitis? Ratione ipsa eaque vel nobis ullam expedita nostrum vitae dolor, nam provident architecto.</p>
+              </div>
+
+              <div className="inner-contain bg-white p-7 rounded-md shadow">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h5>Mike Ross</h5>
+                    <small>Developer</small>
+                  </div>
+                  <div>
+                    <Image src="/testi/quote.svg" alt="Quote" width={54} height={50} />
+                  </div>
+                </div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam, quis nesciunt sed facere possimus et velit debitis? Ratione ipsa eaque vel nobis ullam expedita nostrum vitae dolor, nam provident architecto.</p>
+              </div>
+
+              <div className="inner-contain bg-white p-7 rounded-md shadow">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h5>Anna Lee</h5>
+                    <small>Designer</small>
+                  </div>
+                  <div>
+                    <Image src="/testi/quote.svg" alt="Quote" width={54} height={50} />
+                  </div>
+                </div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam, quis nesciunt sed facere possimus et velit debitis? Ratione ipsa eaque vel nobis ullam expedita nostrum vitae dolor, nam provident architecto.</p>
+              </div>
+              <div className="inner-contain bg-white p-7 rounded-md shadow">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h5>John Doe</h5>
+                    <small>UI/UX Designer</small>
+                  </div>
+                  <div>
+                    <Image src="/testi/quote.svg" alt="Quote" width={54} height={50} />
+                  </div>
+                </div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam, quis nesciunt sed facere possimus et velit debitis? Ratione ipsa eaque vel nobis ullam expedita nostrum vitae dolor, nam provident architecto.</p>
+              </div>
+
+              <div className="inner-contain bg-white p-7 rounded-md shadow">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h5>Jane Smith</h5>
+                    <small>Product Manager</small>
+                  </div>
+                  <div>
+                    <Image src="/testi/quote.svg" alt="Quote" width={54} height={50} />
+                  </div>
+                </div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam, quis nesciunt sed facere possimus et velit debitis? Ratione ipsa eaque vel nobis ullam expedita nostrum vitae dolor, nam provident architecto.</p>
+              </div>
+
+              <div className="inner-contain bg-white p-7 rounded-md shadow">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h5>Mike Ross</h5>
+                    <small>Developer</small>
+                  </div>
+                  <div>
+                    <Image src="/testi/quote.svg" alt="Quote" width={54} height={50} />
+                  </div>
+                </div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam, quis nesciunt sed facere possimus et velit debitis? Ratione ipsa eaque vel nobis ullam expedita nostrum vitae dolor, nam provident architecto.</p>
+              </div>
+
+              <div className="inner-contain bg-white p-7 rounded-md shadow">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <h5>Anna Lee</h5>
+                    <small>Designer</small>
+                  </div>
+                  <div>
+                    <Image src="/testi/quote.svg" alt="Quote" width={54} height={50} />
+                  </div>
+                </div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam, quis nesciunt sed facere possimus et velit debitis? Ratione ipsa eaque vel nobis ullam expedita nostrum vitae dolor, nam provident architecto.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+
 
 
       </main>

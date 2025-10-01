@@ -315,3 +315,26 @@ nav ul li .my-nav-link:hover {
   background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M12 22L8 18H16L12 22ZM12 2L16 6H8L12 2ZM12 14C10.8954 14 10 13.1046 10 12C10 10.8954 10.8954 10 12 10C13.1046 10 14 10.8954 14 12C14 13.1046 13.1046 14 12 14ZM2 12L6 8V16L2 12ZM22 12L18 16V8L22 12Z"/></svg>') no-repeat center;
   background-size: contain;
 }
+
+.client-rev {
+  padding-top: 3rem;
+  padding-bottom: 6rem;
+}
+.client-rev .fade-title {
+  white-space: nowrap;
+  font-size: 270px;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+}
+.client-rev .inner-contain:nth-child(even) {
+ top: 4rem;
+ position: relative;
+}
+.client-rev .inner-contain p{
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  color: #6b6b6b;
+  margin-top: 3rem;
+}
+
