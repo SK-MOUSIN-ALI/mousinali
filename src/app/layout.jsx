@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import "./globals.css";
 import LenisProvider from "./providers/LenisProvider";
 
+
 export const metadata = {
   title: "My Portfolio",
   description: "My Portfolio",

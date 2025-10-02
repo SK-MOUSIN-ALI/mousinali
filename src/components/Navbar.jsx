@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Navbar() {
     return (
-        <nav className="bg-white">
+        <nav className="bg-white hidden lg:block">
             <div className="container-fluid">
                 <div className="w-full flex justify-between items-center bg-white">
                     <div className="logo">
