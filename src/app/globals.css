@@ -236,7 +236,7 @@ nav ul li .my-nav-link:hover {
   margin-bottom: 2.025rem;
 }
 
-.hero .avail {
+.avail {
   display: inline-block;
   padding: 0.8rem 1.5rem;
   background-color: rgba(40, 199, 111, 0.14);

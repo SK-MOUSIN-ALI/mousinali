@@ -7,6 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 import Marquee from "@/components/Marquee";
 import Testimonials from "@/components/Testimonials";
+import Cta from "@/components/Cta";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
@@ -453,8 +454,13 @@ export default function Home() {
         {/* ---------------- MARQUEE ---------------- */}
         <Marquee />
 
+       <Cta />
+
         {/* ---------------- TESTIMONIALS ---------------- */}
         <Testimonials />
+
+
+
 
 
       </main>
