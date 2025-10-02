@@ -113,7 +113,7 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  transform: translate(-50%, -50%) scale(0); 
+  transform: translate(-50%, -50%) scale(0);
   pointer-events: none;
   z-index: 1001;
 }
@@ -356,3 +356,30 @@ nav ul li .my-nav-link:hover {
   color: #6b6b6b;
   margin-top: 3rem;
 }
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes marquee2 {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-marquee {
+  display: inline-block;
+  animation: marquee 20s linear infinite;
+}
+
+

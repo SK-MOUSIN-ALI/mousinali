@@ -5,6 +5,7 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import Marquee from "@/components/Marquee";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
@@ -528,6 +529,9 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <Marquee />
+
 
         <section className="relative client-rev bg-[#F6F6F6] min-h-screen overflow-hidden">
           <h2 className="fade-title font-weight-500 text-[#DFDFDF] whitespace-nowrap">
