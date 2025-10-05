@@ -8,6 +8,7 @@ import { useGSAP } from "@gsap/react";
 import Marquee from "@/components/Marquee";
 import Testimonials from "@/components/Testimonials";
 import Cta from "@/components/Cta";
+import Enquiry from "@/components/Enquiry";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
@@ -458,6 +459,9 @@ export default function Home() {
 
         {/* ---------------- TESTIMONIALS ---------------- */}
         <Testimonials />
+
+
+        <Enquiry />
 
 
 

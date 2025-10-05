@@ -58,7 +58,7 @@ const Testimonials = () => {
         ScrollTrigger.create({
             trigger: ".client-rev",
             start: "top top",
-            end: "+=200%",
+            end: "+=180%",
             pin: true,
             scrub: true,
         });
