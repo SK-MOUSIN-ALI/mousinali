@@ -1,8 +1,8 @@
-import Footer from "../components/Footer";
-import Cursor from "../components/Cursor";
-import Navbar from "../components/Navbar";
 import "./globals.css";
 import LenisProvider from "./providers/LenisProvider";
+import Cursor from "../components/Cursor";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 
 export const metadata = {

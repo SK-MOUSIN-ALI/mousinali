@@ -428,7 +428,7 @@ export default function Home() {
               <div className="sticky top-0 h-screen flex items-center justify-end overflow-hidden rounded-xl">
                 <div className="relative w-[650px] h-[650px] rounded-xl overflow-hidden shadow-xl">
                   <Image
-                    src="/portfolio/por-1.jpg"
+                    src="/service/ser-1.jpg"
                     alt="UI/UX"
                     fill
                     className="uiux-sticky-img absolute object-cover rounded-xl"

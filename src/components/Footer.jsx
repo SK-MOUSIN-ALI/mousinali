@@ -3,11 +3,15 @@ import { useEffect, useRef } from "react";
 import Link from "next/link";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { usePathname } from "next/navigation";
 
 export default function Footer() {
     const footerRef = useRef(null);
+    const pathname = usePathname(); // Detect route changes
 
     useEffect(() => {
+        if (!footerRef.current) return;
+
         gsap.registerPlugin(ScrollTrigger);
 
         const ctx = gsap.context(() => {
@@ -20,60 +24,38 @@ export default function Footer() {
                 },
             });
 
-            // Text reveal for name & subtext
             tl.fromTo(
-                footerRef.current.querySelectorAll(" h2, p"),
+                footerRef.current.querySelectorAll("h2, p"),
                 { y: 60, opacity: 0 },
-                {
-                    y: 0,
-                    opacity: 1,
-                    duration: 0.8,
-                    stagger: 0.15,
-                    ease: "power3.out",
-                }
+                { y: 0, opacity: 1, duration: 0.8, stagger: 0.15, ease: "power3.out" }
             );
 
-            // Social icons fade-up
             tl.fromTo(
                 footerRef.current.querySelectorAll("a svg"),
                 { y: 40, opacity: 0 },
-                {
-                    y: 0,
-                    opacity: 1,
-                    duration: 0.6,
-                    stagger: 0.1,
-                    ease: "back.out(1.7)",
-                },
+                { y: 0, opacity: 1, duration: 0.6, stagger: 0.1, ease: "back.out(1.7)" },
                 "-=0.4"
             );
+
             tl.fromTo(
-                footerRef.current.querySelectorAll(" span"),
+                footerRef.current.querySelectorAll("span"),
                 { y: 60, opacity: 0 },
-                {
-                    y: 0,
-                    opacity: 1,
-                    duration: 0.4,
-                    ease: "power3.out",
-                }
+                { y: 0, opacity: 1, duration: 0.4, ease: "power3.out" }
             );
 
-            // Menu items slide up from bottom
             tl.fromTo(
                 footerRef.current.querySelectorAll(".menu-item"),
                 { y: 80, opacity: 0 },
-                {
-                    y: 0,
-                    opacity: 1,
-                    duration: 0.8,
-                    stagger: 0.2,
-                    ease: "power3.out",
-                },
+                { y: 0, opacity: 1, duration: 0.8, stagger: 0.2, ease: "power3.out" },
                 "-=0.4"
             );
         }, footerRef);
 
+        // Refresh ScrollTrigger whenever pathname changes
+        ScrollTrigger.refresh();
+
         return () => ctx.revert();
-    }, []);
+    }, [pathname]);
 
     return (
         <footer ref={footerRef} className="pt-8 pb-0 bg-[#F7F7F2]">
