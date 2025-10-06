@@ -169,7 +169,7 @@ export default function Enquiry() {
                                 <button
                                     type="submit"
                                     className="w-full bg-black text-white text-sm font-medium py-3 rounded-lg shadow-sm 
-        hover:bg-gray-800 focus:ring-0.5 focus:ring-black focus:ring-offset-2 transition-all"
+        hover:bg-gray-700 focus:ring-0.5 focus:ring-black focus:ring-offset-2 transition-all duration-200 ease-in-out"
                                 >
                                     Submit Enquiry
                                 </button>
@@ -205,19 +205,6 @@ export default function Enquiry() {
                                     </svg>
                                 </a>
 
-                                {/* Instagram */}
-                                <a
-                                    href="https://instagram.com"
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    aria-label="Instagram"
-                                    className="w-6 h-6 inline-block transition-transform transform hover:scale-110"
-                                >
-                                    <svg viewBox="0 0 24 24" fill="currentColor" className="w-full h-full" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
-                                        <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 6.3A4.7 4.7 0 1 0 16.7 13 4.71 4.71 0 0 0 12 8.3zM18.4 5.6a1.1 1.1 0 1 0 1.1 1.1 1.1 1.1 0 0 0-1.1-1.1z" />
-                                    </svg>
-                                </a>
-
                                 {/* GitHub */}
                                 <a
                                     href="https://github.com"
@@ -249,11 +236,18 @@ export default function Enquiry() {
                                     href="https://twitter.com"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    aria-label="Twitter"
+                                    aria-label="X (Twitter)"
                                     className="w-5 h-5 inline-block transition-transform transform hover:scale-110"
                                 >
-                                    <svg viewBox="0 0 24 24" fill="currentColor" className="w-full h-full" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
-                                        <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53A4.48 4.48 0 0 0 22.43 1.6a9.05 9.05 0 0 1-2.88 1.1A4.52 4.52 0 0 0 16.11 0c-2.5 0-4.52 2.26-3.7 4.6A12.94 12.94 0 0 1 1.64.9 4.51 4.51 0 0 0 3.13 6.6 4.44 4.44 0 0 1 .89 6.3v.06a4.5 4.5 0 0 0 3.62 4.41 4.52 4.52 0 0 1-2.04.08 4.52 4.52 0 0 0 4.21 3.13A9.06 9.06 0 0 1 0 19.54a12.8 12.8 0 0 0 6.92 2.03c8.3 0 12.85-7.02 12.85-13.12 0-.2 0-.39-.01-.59A9.22 9.22 0 0 0 23 3z" />
+                                    <svg
+                                        viewBox="0 0 24 24"
+                                        fill="currentColor"
+                                        className="w-full h-full"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        role="img"
+                                        aria-hidden="true"
+                                    >
+                                        <path d="M18.244 2H21.5l-7.41 8.455L22 22h-5.818l-4.546-5.91L6.09 22H2.833l7.897-8.995L2 2h5.909l4.09 5.318L18.244 2Zm-1.07 18h1.52L7.91 4h-1.52l10.785 16Z" />
                                     </svg>
                                 </a>
                             </div>

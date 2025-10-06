@@ -1,3 +1,4 @@
+import Footer from "../components/Footer";
 import Cursor from "../components/Cursor";
 import Navbar from "../components/Navbar";
 import "./globals.css";
@@ -18,7 +19,8 @@ export default function RootLayout({ children }) {
         <LenisProvider>
           <Cursor />
           <Navbar />
-          {children}
+          <main>{children}</main>
+          <Footer />
         </LenisProvider>
       </body>
     </html>

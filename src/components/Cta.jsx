@@ -56,9 +56,9 @@ const Cta = () => {
           yPercent: 0,
           delay: 0.25,
           opacity: 1,
-          duration: 1.2,
+          duration: 0.9,
           ease: "power3.inOut",
-          stagger: 0.15,
+          stagger: 0.125,
         },
         "-=0.5"
       )
@@ -69,7 +69,7 @@ const Cta = () => {
         .to(textRef.current, {
           opacity: 1,
           y: 0,
-          duration: 1,
+          duration: 0.75,
           ease: "power3.out",
         })
 

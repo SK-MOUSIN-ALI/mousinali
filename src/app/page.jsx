@@ -127,7 +127,7 @@ export default function Home() {
 
   return (
     <>
-      <main ref={pageRef}>
+      <div ref={pageRef}>
         {/* ---------------- HERO ---------------- */}
         <section className="hero bg-[#F8F8F8] content-center">
           <div className="container-fluid">
@@ -239,9 +239,9 @@ export default function Home() {
         {/* ---------------- PORTFOLIO ---------------- */}
         <section className="portfolio bg-[#f8f8f8] relative fade-title-padd">
           <div className="container-fluid">
-            <h1 className="fade-title font-weight-500 text-transparent bg-clip-text bg-gradient-to-b from-black/10 to-transparent">
+            <h2 className="fade-title font-weight-500 text-transparent bg-clip-text bg-gradient-to-b from-black/10 to-transparent">
               Portfolio
-            </h1>
+            </h2>
             <div className="grid grid-cols-2 gap-8 gap-y-15 relative z-10">
               <div className="inner-contain bg-white rounded-[1.25rem] overflow-hidden shadow-[0px_4px_20px_0px_rgba(0,0,0,0.06)]">
                 <div>
@@ -455,19 +455,21 @@ export default function Home() {
         {/* ---------------- MARQUEE ---------------- */}
         <Marquee />
 
-       <Cta />
+        {/* ---------------- CTA ---------------- */}
+        <Cta />
 
         {/* ---------------- TESTIMONIALS ---------------- */}
         <Testimonials />
 
-
+        {/* ---------------- ENQUIRY ---------------- */}
         <Enquiry />
 
+        {/* ---------------- FOOTER ---------------- */}
+       
 
 
 
-
-      </main>
+      </div>
     </>
   );
 }
