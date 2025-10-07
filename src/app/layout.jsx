@@ -1,4 +1,5 @@
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/react";
 import LenisProvider from "./providers/LenisProvider";
 import Cursor from "../components/Cursor";
 import Navbar from "../components/Navbar";
@@ -22,6 +23,7 @@ export default function RootLayout({ children }) {
           <main>{children}</main>
           <Footer />
         </LenisProvider>
+        <Analytics />
       </body>
     </html>
   );
