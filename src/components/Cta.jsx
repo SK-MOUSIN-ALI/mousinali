@@ -108,66 +108,67 @@ const Cta = () => {
             alt="Next.js"
             width={60}
             height={60}
-            className="absolute top-[15%] left-[18%]"
+            className="absolute top-[15%] left-[18%] tech-next"
           />
           <Image
             ref={(el) => (imagesRef.current[1] = el)}
             src="/tech/bootstrap.svg"
-            alt="Next.js"
+            alt="Bootstrap"
             width={75}
             height={60}
-            className="absolute top-[28%] left-[25%]"
+            className="absolute top-[28%] left-[25%] tech-bootstrap"
           />
           <Image
             ref={(el) => (imagesRef.current[2] = el)}
             src="/tech/figma.svg"
-            alt="Next.js"
+            alt="Figma"
             width={40}
             height={60}
-            className="absolute bottom-[25%] left-[22%]"
+            className="absolute bottom-[25%] left-[22%] tech-figma"
           />
           <Image
             ref={(el) => (imagesRef.current[3] = el)}
             src="/tech/tailwind.png"
-            alt="Next.js"
+            alt="Tailwind"
             width={98}
             height={60}
-            className="absolute bottom-[12%] left-[30%]"
+            className="absolute bottom-[12%] left-[30%] tech-tailwind"
           />
 
           {/* Right side logos */}
           <Image
             ref={(el) => (imagesRef.current[4] = el)}
             src="/tech/react.png"
-            alt="Next.js"
+            alt="React"
             width={67}
             height={60}
-            className="absolute top-[18%] right-[20%]"
+            className="absolute top-[18%] right-[20%] tech-react"
           />
           <Image
             ref={(el) => (imagesRef.current[5] = el)}
             src="/tech/node.png"
-            alt="Next.js"
+            alt="Node.js"
             width={65}
             height={65}
-            className="absolute top-[32%] right-[27%]"
+            className="absolute top-[32%] right-[27%] tech-node"
           />
           <Image
             ref={(el) => (imagesRef.current[6] = el)}
             src="/tech/photoshop.svg"
-            alt="Next.js"
+            alt="Photoshop"
             width={62}
             height={60}
-            className="absolute bottom-[25%] right-[24%]"
+            className="absolute bottom-[25%] right-[24%] tech-photoshop"
           />
           <Image
             ref={(el) => (imagesRef.current[7] = el)}
             src="/tech/html.svg"
-            alt="Next.js"
+            alt="HTML"
             width={53}
             height={60}
-            className="absolute bottom-[12%] right-[30%]"
+            className="absolute bottom-[12%] right-[30%] tech-html"
           />
+
         </div>
 
 
@@ -178,7 +179,7 @@ const Cta = () => {
         <span className="avail font-light hero-cta mb-4 block text-gray-500">
           Available For Work
         </span>
-        <h2 className="text-4xl md:text-5xl font-weight-500 capitalize text-gray-900 leading-tight">
+        <h2 className="text-4xl lg:text-4xl 2xl:text-5xl font-weight-500 capitalize text-gray-900 leading-tight">
           Have an idea for a project? <br /> Let's discuss about it.
         </h2>
 

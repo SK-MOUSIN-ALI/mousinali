@@ -62,7 +62,7 @@ html,
 body {
   width: 100%;
   height: 100%;
-  font-family: 'Baikal Trial' ,sans-serif;
+  font-family: 'Baikal Trial', sans-serif;
 }
 
 .font-weight-100 {
@@ -382,4 +382,172 @@ nav ul li .my-nav-link:hover {
   animation: marquee 20s linear infinite;
 }
 
+@media (max-width: 1800px) {
+  .container-fluid {
+    padding: 0 10rem;
+  }
 
+
+}
+
+@media (max-width: 1600px) {
+  .container-fluid {
+    padding: 0 9rem;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+    line-height: 68px;
+  }
+
+  .hero p {
+    font-size: 1.125rem;
+    line-height: 2rem;
+    margin-bottom: 2.025rem;
+  }
+
+  .hero h5 {
+    font-size: 1.35rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .hero {
+    padding: 3rem 0;
+    padding-top: 2rem;
+  }
+
+  .hero-proj {
+    margin-top: 3rem;
+  }
+
+  .about h2 {
+    font-size: 1.75rem;
+    line-height: 2.4rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .about .about-text {
+    padding-right: 1.85rem;
+  }
+
+  .about p {
+    font-size: 1.125rem;
+    line-height: 2.125rem;
+    margin-bottom: 2.25rem;
+  }
+
+  .fade-title {
+    font-size: 17rem;
+    top: 2%;
+  }
+
+  .portfolio .pro-content p {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+
+  .services p {
+    margin-top: 0.75rem;
+  }
+
+  .tech-next {
+    left: 15%;
+  }
+
+  .tech-bootstrap {
+    left: 22%;
+  }
+
+  .tech-figma {
+    left: 19%;
+  }
+
+  .tech-tailwind {
+    left: 27%;
+  }
+
+  /* Right side adjustments */
+  .tech-react {
+    right: 17%;
+  }
+
+  .tech-node {
+    right: 23%;
+  }
+
+  .tech-photoshop {
+    right: 20%;
+  }
+
+  .tech-html {
+    right: 26%;
+  }
+
+  .client-rev .inner-contain p {
+    font-size: 1rem;
+    line-height: 1.65rem;
+    margin-top: 1rem;
+  }
+
+  .quote-img {
+    height: 36px;
+  }
+
+  .client-rev .fade-title {
+    font-size: 13rem;
+  }
+}
+
+@media (max-width: 1528px) {
+  .hero h1 {
+    font-size: 2.9rem;
+    line-height: 66px;
+  }
+
+  .about .about-text {
+    padding-right: 1.25rem;
+  }
+
+  .about h2 {
+    font-size: 1.65rem;
+    line-height: 2.3rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .about p {
+    font-size: 1.075rem;
+    line-height: 2rem;
+    margin-bottom: 2.25rem;
+  }
+
+  .services h2 {
+    font-size: 2.25rem;
+    font-weight: 500;
+    margin-bottom: 0;
+  }
+
+  .services p {
+    font-size: 1.075rem;
+    line-height: 1.85rem;
+    margin: 1.5rem 0;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 1440px) {
+  .container-fluid {
+    padding: 0 7rem;
+  }
+
+  .hero h1 {
+    line-height: 64px;
+  }
+
+  .fade-title {
+    font-size: 16rem;
+    top: 3%;
+  }
+}

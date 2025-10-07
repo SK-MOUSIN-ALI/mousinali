@@ -117,6 +117,7 @@ const Testimonials = () => {
                                         alt="Quote"
                                         width={54}
                                         height={50}
+                                        className='quote-img'
                                     />
                                 </div>
                             </div>

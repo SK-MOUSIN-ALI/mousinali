@@ -163,7 +163,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="flex items-center gap-6 justify-center mt-[4rem]">
+            <div className="flex items-center gap-6 justify-center mt-[4rem] hero-proj">
               <div className="w-1/3 hero-img">
                 <Image src="/hero/hero-1.jpg" alt="Profile picture" width={490} height={350} />
               </div>
@@ -180,8 +180,8 @@ export default function Home() {
         {/* ---------------- ABOUT ---------------- */}
         <section className="section-padding about">
           <div className="container-fluid">
-            <div className="flex items-center">
-              <div className="w-1/2 about-text">
+            <div className="grid grid-cols-2 items-center gap-6">
+              <div className="about-text">
                 <h2 className="font-weight-400">
                   Discover my story. I’m passionate about creating cool designs to inspire,
                   engage and connect people.
@@ -215,7 +215,8 @@ export default function Home() {
                   </div>
                 </a>
               </div>
-              <div className="w-1/2 flex items-center gap-5 justify-end">
+
+              <div className="flex items-center gap-5 justify-end">
                 <div className="about-img">
                   <Image
                     src="/about/about-1.jpg"
@@ -465,7 +466,7 @@ export default function Home() {
         <Enquiry />
 
         {/* ---------------- FOOTER ---------------- */}
-       
+
 
 
 
