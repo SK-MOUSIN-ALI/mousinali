@@ -390,6 +390,26 @@ nav ul li .my-nav-link:hover {
 
 }
 
+@media (max-width: 1720px) {
+  .container-fluid {
+    padding: 0 10rem;
+  }
+
+  .hero h1 {
+    font-size: 3.25rem;
+    line-height: 70px;
+  }
+
+  .img-container {
+    width: 570px;
+    height: 570px;
+  }
+
+  .client-rev .fade-title {
+    font-size: 15rem;
+  }
+}
+
 @media (max-width: 1600px) {
   .container-fluid {
     padding: 0 9rem;

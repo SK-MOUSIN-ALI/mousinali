@@ -427,7 +427,7 @@ export default function Home() {
 
               {/* RIGHT SIDE STICKY IMAGES */}
               <div className="sticky top-0 h-screen flex items-center justify-end overflow-hidden rounded-xl">
-                <div className="relative w-[650px] h-[650px] rounded-xl overflow-hidden shadow-xl">
+                <div className="relative w-[650px] h-[650px] img-container rounded-xl overflow-hidden shadow-xl">
                   <Image
                     src="/service/ser-1.jpg"
                     alt="UI/UX"
