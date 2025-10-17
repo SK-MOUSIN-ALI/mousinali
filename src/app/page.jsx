@@ -466,10 +466,6 @@ export default function Home() {
         <Enquiry />
 
         {/* ---------------- FOOTER ---------------- */}
-
-
-
-
       </div>
     </>
   );

@@ -412,7 +412,7 @@ nav ul li .my-nav-link:hover {
 
 @media (max-width: 1600px) {
   .container-fluid {
-    padding: 0 9rem;
+    padding: 0 6rem;
   }
 
   .hero h1 {
