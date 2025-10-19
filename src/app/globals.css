@@ -410,13 +410,19 @@ nav ul li .my-nav-link:hover {
   }
 }
 
+@media (max-width: 1800px) {
+  .container-fluid {
+    padding: 0 9rem;
+  }
+}
+
 @media (max-width: 1600px) {
   .container-fluid {
     padding: 0 6rem;
   }
 
   .hero h1 {
-    font-size: 3rem;
+    font-size: 3.2rem;
     line-height: 68px;
   }
 
@@ -563,6 +569,10 @@ nav ul li .my-nav-link:hover {
   }
 
   .hero h1 {
+    line-height: 64px;
+  }
+  .hero h1 {
+    font-size: 2.8rem;
     line-height: 64px;
   }
 
