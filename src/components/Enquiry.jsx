@@ -261,6 +261,7 @@ export default function Enquiry() {
                                 style={{ border: 0 }}
                                 allowFullScreen
                                 loading="lazy"
+                                title="Location"
                                 referrerPolicy="no-referrer-when-downgrade"
                                 className="w-full rounded-lg shadow-md"
                             ></iframe>
