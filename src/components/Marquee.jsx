@@ -39,10 +39,10 @@ export default function Marquee() {
 
     return (
         <>
-            <section className="relative w-full overflow-hidden bg-[#222222] text-gray-300 py-12">
+            <section className="relative w-full overflow-hidden bg-[#222222] text-gray-300 lg:py-8 py-4 xl:py-12">
                 <div
                     ref={marqueeRef}
-                    className="flex whitespace-nowrap text-5xl font-weight-500"
+                    className="flex whitespace-nowrap xl:text-5xl lg:text-4xl md:text-3xl text-2xl font-weight-500"
                 >
                     <div className="flex items-center">
                         <Link href="/contact" className="mx-8 hover:text-white transition-all  duration-200">Get in Touch</Link>

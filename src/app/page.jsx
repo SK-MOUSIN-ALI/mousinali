@@ -245,7 +245,7 @@ export default function Home() {
                     height={476}
                   />
                 </div>
-                <div className="about-img">
+                <div className="about-img sm:block hidden">
                   <Image
                     src="/about/about-2.jpg"
                     alt="Profile picture 2"
@@ -260,7 +260,7 @@ export default function Home() {
         {/* ---------------- PORTFOLIO ---------------- */}
         <section className="portfolio bg-[#f8f8f8] relative fade-title-padd">
           <div className="container-fluid">
-            <h2 className="fade-title font-weight-500 text-transparent bg-clip-text bg-gradient-to-b from-black/10 to-transparent">
+            <h2 className="fade-title font-weight-500 text-transparent bg-clip-text bg-gradient-to-b from-black/20 to-transparent">
               Portfolio
             </h2>
             <div className="grid md:grid-cols-2 grid-cols-1 xl:gap-8 gap-5 xl:gap-y-15 gap-y-10 relative z-10">

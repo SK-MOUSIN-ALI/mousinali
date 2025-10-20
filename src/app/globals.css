@@ -782,7 +782,45 @@ nav ul li .my-nav-link:hover {
   .fade-title-padd {
     padding-top: 6.5rem;
   }
-      .hero-text {
-        width: 100%;
-    }
+
+  .hero-text {
+    width: 100%;
+  }
+
+  .about-img img {
+    width: 100%;
+  }
+
+  .portfolio .pro-content {
+    padding: 1rem 1.25rem;
+    padding-top: 1rem;
+  }
+
+  .portfolio .pro-content h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .portfolio .pro-content p {
+    margin-bottom: 1.5rem;
+    line-height: 24px;
+    font-size: 0.9rem;
+  }
+
+  .my-badge {
+    padding: 0.35rem 0.65rem;
+    font-size: 0.65rem;
+  }
+
+  .about h2 {
+    font-size: 1.25rem;
+    line-height: 1.85rem;
+    margin-bottom: 1rem;
+  }
+
+  .about p {
+    font-size: 0.95rem;
+    line-height: 1.65rem;
+    margin-bottom: 2rem;
+  }
 }
