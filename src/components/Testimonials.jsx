@@ -52,81 +52,128 @@ const feedbacks = [
 const Testimonials = () => {
     useGSAP(() => {
         /** ----------------
-              * Testimonials
-              * -------------- */
+         * Testimonials (Desktop only)
+         * ---------------- */
 
-        ScrollTrigger.create({
-            trigger: ".client-rev",
-            start: "top top",
-            end: "+=180%",
-            pin: true,
-            scrub: true,
-        });
+        ScrollTrigger.matchMedia({
 
-        // Heading animation
-        gsap.from(".client-rev h2", {
-            xPercent: 100,
-            opacity: 0,
-            duration: 2,
-            scrollTrigger: {
-                trigger: ".client-rev h2",
-                start: "top center",
-                end: "bottom center",
-                scrub: 2,
+            // For screens above 1025px
+            "(min-width: 1025px)": function () {
+
+                // Pin Section
+                ScrollTrigger.create({
+                    trigger: ".client-rev",
+                    start: "top top",
+                    end: "+=180%",
+                    pin: true,
+                    scrub: true,
+                });
+
+                // Heading Animation
+                gsap.from(".client-rev h2", {
+                    xPercent: 100,
+                    opacity: 0,
+                    duration: 2,
+                    scrollTrigger: {
+                        trigger: ".client-rev h2",
+                        start: "top center",
+                        end: "bottom center",
+                        scrub: 2,
+                    },
+                });
+
+                // Cards Animation (after heading)
+                gsap.from(".client-rev .inner-contain", {
+                    y: 100,
+                    opacity: 0,
+                    duration: 1,
+                    stagger: 0.4,
+                    delay: 2,
+                    scrollTrigger: {
+                        trigger: ".client-rev .container-fluid",
+                        start: "90% center+=100",
+                        end: "+=100%",
+                        scrub: true,
+                    },
+                });
             },
+
+            // Optional: reset things for smaller screens
+            "(max-width: 1024px)": function () {
+                ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+                gsap.set([".client-rev h2", ".client-rev .inner-contain"], { clearProps: "all" });
+            }
         });
 
+    }, []);
 
-        // Cards animation (after heading)
-        gsap.from(".client-rev .inner-contain", {
-            y: 100,
-            opacity: 0,
-            duration: 1,
-            stagger: 0.4,
-            delay: 2,
-            scrollTrigger: {
-                trigger: ".client-rev .container-fluid",
-                start: "90% center+=100",
-                end: "+=100%",
-                scrub: true,
-            },
-        });
-    })
 
 
     return (
-        <section className="relative client-rev bg-[#F6F6F6] min-h-screen overflow-hidden">
-            <h2 className="fade-title font-weight-500 text-[#DFDFDF] whitespace-nowrap">
-                Testimonials
-            </h2>
-            <div className="container-fluid relative z-10">
-                <div className="grid grid-cols-4 gap-5 gap-y-10">
-                    {feedbacks.map((fb, i) => (
-                        <div
-                            key={i}
-                            className="inner-contain bg-white p-7 rounded-md shadow"
-                        >
-                            <div className="flex items-center justify-between mb-4">
-                                <div>
-                                    <h5 className="font-weight-500">{fb.name}</h5>
-                                    <small className="text-gray-500">{fb.role}</small>
+        <>
+            <section className="relative client-rev bg-[#F6F6F6] min-h-screen overflow-hidden xl:block hidden">
+                <h2 className="fade-title font-weight-500 text-[#DFDFDF] whitespace-nowrap">
+                    Testimonials
+                </h2>
+                <div className="container-fluid relative z-10">
+                    <div className="grid xl:grid-cols-4 grid-cols-3 gap-5 gap-y-10 feedback-wrapper">
+                        {feedbacks.map((fb, i) => (
+                            <div
+                                key={i}
+                                className="inner-contain bg-white p-7 rounded-md shadow"
+                            >
+                                <div className="flex items-center justify-between mb-4">
+                                    <div>
+                                        <h5 className="font-weight-500">{fb.name}</h5>
+                                        <small className="text-gray-500">{fb.role}</small>
+                                    </div>
+                                    <div>
+                                        <Image
+                                            src={quote}
+                                            alt="Quote"
+                                            width={54}
+                                            height={50}
+                                            className='quote-img'
+                                        />
+                                    </div>
                                 </div>
-                                <div>
-                                    <Image
-                                        src={quote}
-                                        alt="Quote"
-                                        width={54}
-                                        height={50}
-                                        className='quote-img'
-                                    />
-                                </div>
+                                <p className="text-gray-700 leading-relaxed text-sm">{fb.text}</p>
                             </div>
-                            <p className="text-gray-700 leading-relaxed text-sm">{fb.text}</p>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
+
+            <section className='xl:hidden block relative testimonial bg-[#F6F6F6] section-padding'>
+                <div className="container-fluid relative z-10">
+                    <div className="grid sm:grid-cols-2 grid-cols-1 lg:grid-cols-3 gap-4">
+                        {feedbacks.map((fb, i) => (
+                            <div
+                                key={i}
+                                className="inner-contain bg-white p-7 rounded-md shadow"
+                            >
+                                <div className="flex items-center justify-between mb-4">
+                                    <div>
+                                        <h5 className="font-weight-500">{fb.name}</h5>
+                                        <small className="text-gray-500">{fb.role}</small>
+                                    </div>
+                                    <div>
+                                        <Image
+                                            src={quote}
+                                            alt="Quote"
+                                            width={54}
+                                            height={50}
+                                            className='quote-img'
+                                        />
+                                    </div>
+                                </div>
+                                <p className="text-gray-700 leading-relaxed text-sm">{fb.text}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+        </>
     )
 }
 

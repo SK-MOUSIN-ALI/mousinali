@@ -571,6 +571,7 @@ nav ul li .my-nav-link:hover {
   .hero h1 {
     line-height: 64px;
   }
+
   .hero h1 {
     font-size: 2.8rem;
     line-height: 64px;
@@ -583,12 +584,202 @@ nav ul li .my-nav-link:hover {
 }
 
 @media (max-width: 1366px) {
-    .container-fluid {
-        padding: 0 5rem;
-    }
-        .client-rev .inner-contain p {
-        font-size: 0.9rem;
-        line-height: 1.5rem;
-        margin-top: 1rem;
-    }
+  .container-fluid {
+    padding: 0 5rem;
+  }
+
+  .client-rev .inner-contain p {
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 1276px) {
+  .hero h1 {
+    font-size: 2.55rem;
+    line-height: 58px;
+  }
+}
+
+@media (min-width: 993px) and (max-width: 1024px) {
+  .container-fluid {
+    padding: 0 2rem;
+  }
+
+  .custom-cursor {
+    display: none;
+  }
+
+  .hero h1 {
+    font-size: 2.25rem;
+    line-height: 52px;
+  }
+
+  .hero p {
+    font-size: 1.05rem;
+    line-height: 1.75rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero {
+    padding: 4rem 0;
+    padding-top: 3rem;
+  }
+
+  .about h2 {
+    font-size: 1.25rem;
+    line-height: 1.85rem;
+    margin-bottom: 1rem;
+  }
+
+  .about p {
+    font-size: .95rem;
+    line-height: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .fade-title {
+    font-size: 12rem;
+    top: 2%;
+  }
+
+  .fade-title-padd {
+    padding-top: 10rem;
+  }
+
+  .portfolio .pro-content h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.45rem;
+  }
+
+  .portfolio .pro-content p {
+    margin-bottom: 1.25rem;
+    line-height: 24px;
+    font-size: 0.9rem;
+  }
+
+  .img-container {
+    width: 450px;
+    height: 450px;
+  }
+
+  .services h2 {
+    font-size: 1.65rem;
+  }
+
+  .services p {
+    font-size: 0.95rem;
+    line-height: 1.65rem;
+    margin-top: 0.5rem;
+  }
+
+  .services li::before {
+    display: none;
+  }
+
+  .services li {
+    position: relative;
+    padding-left: 0;
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+  }
+
+  /* .all-icon img {
+   transform: scale(0.85) !important;
+  } */
+
+  .tech-next {
+    left: 8%;
+  }
+
+  .tech-bootstrap {
+    left: 15%;
+  }
+
+  .tech-figma {
+    left: 12%;
+  }
+
+  .tech-tailwind {
+    left: 18%;
+  }
+
+  .tech-tailwind {
+    left: 27%;
+  }
+
+  .tech-react {
+    right: 10%;
+  }
+
+  .tech-node {
+    right: 16%;
+  }
+
+  .tech-photoshop {
+    right: 12%;
+  }
+
+  .tech-html {
+    right: 22%;
+  }
+}
+
+@media (max-width: 992px) {
+  .container-fluid {
+    padding: 0 2rem;
+  }
+
+  .hero-text {
+    width: 70%;
+  }
+
+  .fade-title {
+    font-size: 10rem;
+    top: 2%;
+  }
+
+  .fade-title-padd {
+    padding-top: 8rem;
+  }
+
+  .custom-cursor {
+    display: none;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+    line-height: 58px;
+  }
+
+  .about-img {
+    width: 100%;
+  }
+
+  .about-img img {
+    width: 100%;
+  }
+
+  .about .about-text {
+    padding-right: 0;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container-fluid {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .fade-title {
+    font-size: 5rem;
+    top: 2%;
+  }
+
+  .fade-title-padd {
+    padding-top: 6.5rem;
+  }
 }

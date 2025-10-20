@@ -10,7 +10,6 @@ gsap.registerPlugin(ScrollTrigger);
 const Cta = () => {
   const sectionRef = useRef(null);
   const imagesRef = useRef([]);
-  const circleRef = useRef(null);
   const textRef = useRef(null);
 
   useEffect(() => {
@@ -100,7 +99,7 @@ const Cta = () => {
 
       {/* Floating Logos */}
       <div className="absolute inset-0 flex items-center justify-center">
-        <div className="relative w-full h-full">
+        <div className="relative w-full h-full all-icon">
           {/* Left side logos */}
           <Image
             ref={(el) => (imagesRef.current[0] = el)}

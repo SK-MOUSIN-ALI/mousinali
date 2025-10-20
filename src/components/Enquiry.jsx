@@ -42,7 +42,7 @@ export default function Enquiry() {
     return (
         <section className=" enquiry section-padding">
             <div className="container-fluid">
-                <div className=" grid md:grid-cols-2 gap-12">
+                <div className=" grid md:grid-cols-2 xl:gap-12 gap-5">
                     {/* Left Column - Form */}
                     <div className="rounded-2xl p-8 border border-gray-300  shadow-md">
                         <form className="grid grid-cols-1 md:grid-cols-2 gap-6 gap-x-5">

@@ -8,6 +8,7 @@ import { useGSAP } from "@gsap/react";
 import Marquee from "@/components/Marquee";
 import Testimonials from "@/components/Testimonials";
 import Cta from "@/components/Cta";
+import Service from "@/components/Service";
 import Enquiry from "@/components/Enquiry";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
@@ -163,24 +164,43 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="flex items-center gap-6 justify-center mt-[4rem] hero-proj">
-              <div className="w-1/3 hero-img">
-                <Image src="/hero/hero-1.jpg" alt="Profile picture" width={490} height={350} />
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center mt-[4rem] hero-proj">
+              <div className="hero-img w-full max-w-[490px]">
+                <Image
+                  src="/hero/hero-1.jpg"
+                  alt="Profile picture"
+                  width={490}
+                  height={350}
+                  className="rounded-xl shadow-lg object-cover w-full h-auto"
+                />
               </div>
-              <div className="w-1/3 hero-img">
-                <Image src="/hero/hero-2.jpg" alt="Profile picture" width={490} height={350} />
+              <div className="hero-img w-full max-w-[490px]">
+                <Image
+                  src="/hero/hero-2.jpg"
+                  alt="Profile picture"
+                  width={490}
+                  height={350}
+                  className="rounded-xl shadow-lg object-cover w-full h-auto"
+                />
               </div>
-              <div className="w-1/3 hero-img">
-                <Image src="/hero/hero-3.jpg" alt="Profile picture" width={490} height={350} />
+              <div className="hero-img w-full max-w-[490px] lg:block sm:hidden block">
+                <Image
+                  src="/hero/hero-3.jpg"
+                  alt="Profile picture"
+                  width={490}
+                  height={350}
+                  className="rounded-xl shadow-lg object-cover w-full h-auto"
+                />
               </div>
             </div>
+
           </div>
         </section>
 
         {/* ---------------- ABOUT ---------------- */}
         <section className="section-padding about">
           <div className="container-fluid">
-            <div className="grid grid-cols-2 items-center gap-6">
+            <div className="grid lg:grid-cols-2 grid-cols-1 items-center gap-6">
               <div className="about-text">
                 <h2 className="font-weight-400">
                   Discover my story. I’m passionate about creating cool designs to inspire,
@@ -216,7 +236,7 @@ export default function Home() {
                 </a>
               </div>
 
-              <div className="flex items-center gap-5 justify-end">
+              <div className="flex items-center gap-5 lg:justify-end justify-start">
                 <div className="about-img">
                   <Image
                     src="/about/about-1.jpg"
@@ -243,7 +263,7 @@ export default function Home() {
             <h2 className="fade-title font-weight-500 text-transparent bg-clip-text bg-gradient-to-b from-black/10 to-transparent">
               Portfolio
             </h2>
-            <div className="grid grid-cols-2 gap-8 gap-y-15 relative z-10">
+            <div className="grid md:grid-cols-2 grid-cols-1 xl:gap-8 gap-5 xl:gap-y-15 gap-y-10 relative z-10">
               <div className="inner-contain bg-white rounded-[1.25rem] overflow-hidden shadow-[0px_4px_20px_0px_rgba(0,0,0,0.06)]">
                 <div>
                   <Image
@@ -333,125 +353,7 @@ export default function Home() {
         </section>
 
         {/* ---------------- SERVICES ---------------- */}
-        <section className="services">
-          <div className="container-fluid">
-            <div className="uiux-section relative grid grid-cols-2 justify-between">
-
-              {/* LEFT SIDE TEXT PANELS */}
-              <div className="section-padding">
-
-                {/* Slide 1 */}
-                <div className="uiux-panel h-[90vh] flex flex-col justify-center pr-16">
-                  <h2>UI/UX Research & Design</h2>
-                  <p className="font-weight-300">
-                    Creating human-centered designs that combine functionality with aesthetics.
-                    Through detailed user research, wireframes, and prototypes, delivering
-                    smooth navigation, modern interfaces, and engaging digital experiences
-                    aligned with business objectives and user needs.
-                  </p>
-                  <ul>
-                    <li>
-                      <span className="font-weight-500">User Research :</span> Discover target audience behavior and expectations.
-                    </li>
-                    <li>
-                      <span className="font-weight-500">Wireframing & Prototyping :</span> Visualize flows and test usability early.
-                    </li>
-                    <li>
-                      <span className="font-weight-500">Interface Design :</span> Craft consistent, appealing, and functional UI elements.
-                    </li>
-                    <li>
-                      <span className="font-weight-500">UX Strategy :</span> Connect design solutions with business growth and goals.
-                    </li>
-                    <li>
-                      <span className="font-weight-500">Usability Testing :</span> Validate ideas with real feedback for better results.
-                    </li>
-                  </ul>
-                </div>
-
-                {/* Slide 2 */}
-                <div className="uiux-panel h-[90vh] flex flex-col justify-center pr-16">
-                  <h2>Frontend Development</h2>
-                  <p className="font-weight-300">
-                    Developing modern, responsive, and performance-driven web interfaces that
-                    engage users across all devices. Using React, Next.js, and Tailwind CSS,
-                    ensuring clean code, fast load times, and interactive designs that
-                    perfectly complement UI/UX strategies.
-                  </p>
-                  <ul>
-                    <li>
-                      <span className="font-weight-500">Responsive Layouts :</span> Build pixel-perfect designs for mobile, tablet, and desktop.
-                    </li>
-                    <li>
-                      <span className="font-weight-500">Modern Frameworks :</span> Expertise in React, Next.js, and Tailwind CSS.
-                    </li>
-                    <li>
-                      <span className="font-weight-500">Performance Optimization :</span> Deliver high-speed, SEO-friendly websites.
-                    </li>
-                    <li>
-                      <span className="font-weight-500">Cross-Browser Compatibility :</span> Ensure flawless performance on all browsers.
-                    </li>
-                    <li>
-                      <span className="font-weight-500">Interactive UI :</span> Add animations, transitions, and micro-interactions for engagement.
-                    </li>
-                  </ul>
-                </div>
-
-                {/* Slide 3 */}
-                <div className="uiux-panel h-[100vh] flex flex-col justify-center pr-16">
-                  <h2>Backend Development</h2>
-                  <p className="font-weight-300">
-                    Building powerful, secure, and scalable backends that form the foundation
-                    of modern applications. Specialized in API development, databases, and
-                    eCommerce solutions using MySQL and MongoDB, ensuring smooth integration
-                    with frontends and reliable business operations.
-                  </p>
-                  <ul>
-                    <li>
-                      <span className="font-weight-500">API Development :</span> Create APIs for frontend integration.
-                    </li>
-                    <li>
-                      <span className="font-weight-500">Database Management :</span> Expertise in MySQL and MongoDB for scalable storage.
-                    </li>
-                    <li>
-                      <span className="font-weight-500">eCommerce Solutions :</span> Develop custom online stores and payment integrations.
-                    </li>
-                    <li>
-                      <span className="font-weight-500">Authentication & Security :</span> Implement secure login, roles, and data protection.
-                    </li>
-                    <li>
-                      <span className="font-weight-500">Server-Side Logic :</span> Handle business rules, transactions, and workflows.
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              {/* RIGHT SIDE STICKY IMAGES */}
-              <div className="sticky top-0 h-screen flex items-center justify-end overflow-hidden rounded-xl">
-                <div className="relative w-[650px] h-[650px] img-container rounded-xl overflow-hidden shadow-xl">
-                  <Image
-                    src="/service/ser-1.jpg"
-                    alt="UI/UX"
-                    fill
-                    className="uiux-sticky-img absolute object-cover rounded-xl"
-                  />
-                  <Image
-                    src="/portfolio/por-2.jpg"
-                    alt="Frontend Development"
-                    fill
-                    className="uiux-sticky-img absolute object-cover rounded-xl"
-                  />
-                  <Image
-                    src="/portfolio/por-3.jpg"
-                    alt="Backend Development"
-                    fill
-                    className="uiux-sticky-img absolute object-cover rounded-xl"
-                  />
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </section>
+        <Service />
 
         {/* ---------------- MARQUEE ---------------- */}
         <Marquee />
