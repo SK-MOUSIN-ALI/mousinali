@@ -581,3 +581,14 @@ nav ul li .my-nav-link:hover {
     top: 3%;
   }
 }
+
+@media (max-width: 1366px) {
+    .container-fluid {
+        padding: 0 5rem;
+    }
+        .client-rev .inner-contain p {
+        font-size: 0.9rem;
+        line-height: 1.5rem;
+        margin-top: 1rem;
+    }
+}
