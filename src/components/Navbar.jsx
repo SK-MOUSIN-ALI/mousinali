@@ -19,7 +19,7 @@ export default function Navbar() {
 
             tl.current = gsap.timeline({
                 paused: true,
-                defaults: { ease: "power3.out" },
+                defaults: { ease: "power1.out" },
             });
 
             // Step 1: Overlay reveal (soft slide + fade)
@@ -36,7 +36,7 @@ export default function Navbar() {
                         xPercent: 0,
                         opacity: 1,
                         filter: "blur(0px)",
-                        duration: 0.75,
+                        duration: 0.25,
                         ease: "cubic-bezier(0.83, 0, 0.17, 1)",
                     }
                 )
@@ -49,10 +49,10 @@ export default function Navbar() {
                         scale: 1,
                         opacity: 0.25,
                         stagger: 0.15,
-                        duration: 1,
+                        duration: 0.5,
                         ease: "power2.out",
                     },
-                    "-=0.5"
+                    "-=0.25"
                 )
 
                 // Step 3: Menu links stagger in (fade + lift)
@@ -63,7 +63,7 @@ export default function Navbar() {
                         y: 0,
                         opacity: 1,
                         rotateX: 0,
-                        duration: 0.75,
+                        duration: 0.5,
                         stagger: 0.12,
                         ease: "power2.out",
                     },
