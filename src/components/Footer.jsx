@@ -172,16 +172,8 @@ export default function Footer() {
                     </div>
 
                     {/* Footer bottom */}
-                    <div className="flex flex-col md:flex-row items-center justify-between text-xs text-gray-500 border-t border-gray-200 py-5">
+                    <div className="text-center text-xs text-gray-500 border-t border-gray-200 py-5">
                         <p>© 2025 Mousin Ali, All Rights Reserved</p>
-                        <div className="flex gap-6 mt-2 md:mt-0 justify-end">
-                            <Link href="#" className="hover:underline">
-                                Terms & Conditions
-                            </Link>
-                            <Link href="#" className="hover:underline">
-                                Privacy Policy
-                            </Link>
-                        </div>
                     </div>
                 </div>
             </div>
