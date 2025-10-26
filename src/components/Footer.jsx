@@ -58,13 +58,13 @@ export default function Footer() {
     }, [pathname]);
 
     return (
-        <footer ref={footerRef} className="pt-8 pb-0 bg-[#F7F7F2]">
+        <footer ref={footerRef} className="md:pt-8 pt-4 pb-0 bg-[#F7F7F2]">
             <div className="container-fluid">
                 <div className="text-black flex flex-col justify-between">
-                    <div className="grid md:grid-cols-2 gap-10 py-16">
+                    <div className="grid md:grid-cols-2 gap-10 md:py-16 py-10">
                         {/* Left Section */}
                         <div>
-                            <h2 className="text-5xl font-medium mb-6">Mousin Ali</h2>
+                            <h2 className="md:text-5xl text-3xl font-medium md:mb-6 mb-4">Mousin Ali</h2>
 
                             <div className="mb-10">
                                 <h2 className="text-lg font-medium mb-2">LET’S CONNECT.</h2>
@@ -144,27 +144,27 @@ export default function Footer() {
 
                         {/* Right Section */}
                         <div className="flex flex-col justify-center text-right pl-2">
-                            <div className="menu-item flex justify-between items-center border-b border-gray-200 py-6">
-                                <span className="text-4xl font-weight-300 text-gray-500">01</span>
-                                <Link href="/about" className="text-3xl md:text-4xl font-weight-400 hover:opacity-70 transition">
+                            <div className="menu-item flex justify-between items-center border-b border-gray-200 md:py-6 py-3">
+                                <span className="text-2xl md:text-4xl font-weight-300 text-gray-500">01</span>
+                                <Link href="/about" className="text-2xl md:text-4xl font-weight-400 hover:opacity-70 transition">
                                     ABOUT ME
                                 </Link>
                             </div>
                             <div className="menu-item flex justify-between items-center border-b border-gray-200 py-6">
-                                <span className="text-4xl font-weight-300 text-gray-500">02</span>
-                                <Link href="/services" className="text-3xl md:text-4xl font-weight-400 hover:opacity-70 transition">
+                                <span className="text-2xl md:text-4xl font-weight-300 text-gray-500">02</span>
+                                <Link href="/services" className="text-2xl md:text-4xl font-weight-400 hover:opacity-70 transition">
                                     SERVICES
                                 </Link>
                             </div>
                             <div className="menu-item flex justify-between items-center border-b border-gray-200 py-6">
-                                <span className="text-4xl font-weight-300 text-gray-500">03</span>
-                                <Link href="/portfolio" className="text-3xl md:text-4xl font-weight-400 hover:opacity-70 transition">
+                                <span className="text-2xl md:text-4xl font-weight-300 text-gray-500">03</span>
+                                <Link href="/portfolio" className="text-2xl md:text-4xl font-weight-400 hover:opacity-70 transition">
                                     PORTFOLIO
                                 </Link>
                             </div>
                             <div className="menu-item flex justify-between items-center py-6">
-                                <span className="text-4xl font-weight-300 text-gray-500">04</span>
-                                <Link href="/pricing" className="text-3xl md:text-4xl font-weight-400 hover:opacity-70 transition">
+                                <span className="text-2xl md:text-4xl font-weight-300 text-gray-500">04</span>
+                                <Link href="/pricing" className="text-2xl md:text-4xl font-weight-400 hover:opacity-70 transition">
                                     PRICING
                                 </Link>
                             </div>

@@ -783,6 +783,7 @@ nav ul li .my-nav-link:hover {
 }
   .fade-title-padd {
     padding-top: 6.5rem;
+    padding-bottom: 50px;
   }
 
   .hero-text {
