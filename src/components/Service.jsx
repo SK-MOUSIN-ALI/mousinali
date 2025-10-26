@@ -152,7 +152,7 @@ const Service = () => {
                     </div>
                 </div>
             </section>
-            <section className="mob-ser section-padding">
+            <section className="mob-ser section-padding lg:hidden block">
                 <div className="container-fluid">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-y-6">
                         <div className="inner-contain p-7 border border-gray-200 rounded-xl shadow-lg">
