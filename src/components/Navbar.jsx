@@ -17,10 +17,7 @@ export default function Navbar() {
         if (overlayRef.current) {
             const links = overlayRef.current.querySelectorAll("li");
 
-            tl.current = gsap.timeline({
-                paused: true,
-                defaults: { ease: "power1.out" },
-            });
+            tl.current = gsap.timeline();
 
             // Step 1: Overlay reveal (soft slide + fade)
             tl.current
@@ -37,7 +34,6 @@ export default function Navbar() {
                         opacity: 1,
                         filter: "blur(0px)",
                         duration: 0.25,
-                        ease: "cubic-bezier(0.83, 0, 0.17, 1)",
                     }
                 )
 
@@ -50,9 +46,7 @@ export default function Navbar() {
                         opacity: 0.25,
                         stagger: 0.15,
                         duration: 0.5,
-                        ease: "power2.out",
                     },
-                    "-=0.25"
                 )
 
                 // Step 3: Menu links stagger in (fade + lift)
@@ -65,9 +59,7 @@ export default function Navbar() {
                         rotateX: 0,
                         duration: 0.5,
                         stagger: 0.12,
-                        ease: "power2.out",
                     },
-                    "-=0.25"
                 );
         }
     }, []);

@@ -94,12 +94,12 @@ const Cta = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full flex flex-col items-center justify-center section-padding bg-white overflow-hidden h-[70vh]"
+      className="relative w-full flex flex-col items-center justify-center section-padding bg-white overflow-hidden lg:h-[70vh] h-[auto]"
     >
 
       {/* Floating Logos */}
       <div className="absolute inset-0 flex items-center justify-center">
-        <div className="relative w-full h-full all-icon">
+        <div className="relative w-full h-full all-icon hidden lg:block">
           {/* Left side logos */}
           <Image
             ref={(el) => (imagesRef.current[0] = el)}
@@ -174,11 +174,11 @@ const Cta = () => {
       </div>
 
       {/* Content */}
-      <div ref={textRef} className="relative text-center max-w-2xl mx-auto z-10">
+      <div ref={textRef} className="relative text-center max-w-2xl mx-auto z-10 lg:px-0 px-4">
         <span className="avail font-light hero-cta mb-4 block text-gray-500">
           Available For Work
         </span>
-        <h2 className="text-4xl lg:text-4xl 2xl:text-5xl font-weight-500 capitalize text-gray-900 leading-tight">
+        <h2 className="text-2xl md:text-4xl lg:text-4xl 2xl:text-5xl font-weight-500 capitalize text-gray-900 leading-tight">
           Have an idea for a project? <br /> Let's discuss about it.
         </h2>
 
