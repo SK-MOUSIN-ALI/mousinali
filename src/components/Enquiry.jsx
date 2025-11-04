@@ -5,11 +5,31 @@ import { useState } from "react";
 export default function Enquiry() {
     const [sent, setSent] = useState(false);
     const [currency, setCurrency] = useState("INR");
+    const [loading, setLoading] = useState(false);
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        setSent(true);
-        setTimeout(() => setSent(false), 3000);
+        setLoading(true);
+
+        const formData = new FormData(e.target);
+        formData.append("access_key", "0b66b375-3146-46b8-ae2b-7a909b319d4f"); // replace with your key
+
+        const response = await fetch("https://api.web3forms.com/submit", {
+            method: "POST",
+            body: formData,
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+            setSent(true);
+            e.target.reset();
+            setTimeout(() => setSent(false), 3000);
+        } else {
+            alert("Something went wrong. Please try again!");
+        }
+
+        setLoading(false);
     };
 
     const budgetOptions =
@@ -44,58 +64,36 @@ export default function Enquiry() {
                 {/* Form */}
                 <form onSubmit={handleSubmit} className="space-y-10">
 
-                    {/* 3-Column Grid */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-
-                        {/* Name */}
                         <div>
                             <label className="text-xs uppercase tracking-wider text-neutral-700">Name</label>
-                            <input
-                                required
-                                type="text"
-                                className="mt-1 w-full border-b border-neutral-300 bg-transparent py-2 focus:border-black focus:outline-none text-sm"
-                            />
+                            <input name="name" required type="text" className="mt-1 w-full border-b border-neutral-300 bg-transparent py-2 focus:border-black focus:outline-none text-sm" />
                         </div>
 
-                        {/* Email */}
                         <div>
                             <label className="text-xs uppercase tracking-wider text-neutral-700">Email</label>
-                            <input
-                                required
-                                type="email"
-                                className="mt-1 w-full border-b border-neutral-300 bg-transparent py-2 focus:border-black focus:outline-none text-sm"
-                            />
+                            <input name="email" required type="email" className="mt-1 w-full border-b border-neutral-300 bg-transparent py-2 focus:border-black focus:outline-none text-sm" />
                         </div>
 
-                        {/* Phone */}
                         <div>
                             <label className="text-xs uppercase tracking-wider text-neutral-700">Phone</label>
-                            <input
-                                required
-                                type="tel"
-                                className="mt-1 w-full border-b border-neutral-300 bg-transparent py-2 focus:border-black focus:outline-none text-sm"
-                            />
+                            <input name="phone" required type="tel" className="mt-1 w-full border-b border-neutral-300 bg-transparent py-2 focus:border-black focus:outline-none text-sm" />
                         </div>
 
-                        {/* Service */}
                         <div>
                             <label className="text-xs uppercase tracking-wider text-neutral-700">Service</label>
-                            <select
-                                required
-                                className="mt-1 w-full border-b border-neutral-300 bg-transparent py-2 focus:border-black focus:outline-none text-sm"
-                            >
+                            <select name="service" required className="mt-1 w-full border-b border-neutral-300 bg-transparent py-2 focus:border-black focus:outline-none text-sm">
                                 <option value="">Select service</option>
                                 <option value="uiux">UI/UX Design</option>
                                 <option value="web">Website Design & Development</option>
-                                <option value="brand">Brand Identity</option>
-                                <option value="others">Others</option>
+                                <option value="testing">Manual Testing</option>
                             </select>
                         </div>
 
-                        {/* Currency */}
                         <div>
                             <label className="text-xs uppercase tracking-wider text-neutral-700">Currency</label>
                             <select
+                                name="currency"
                                 value={currency}
                                 onChange={(e) => setCurrency(e.target.value)}
                                 className="mt-1 w-full border-b border-neutral-300 bg-transparent py-2 focus:border-black focus:outline-none text-sm"
@@ -105,26 +103,21 @@ export default function Enquiry() {
                             </select>
                         </div>
 
-                        {/* Budget */}
                         <div>
                             <label className="text-xs uppercase tracking-wider text-neutral-700">Budget</label>
-                            <select
-                                required
-                                className="mt-1 w-full border-b border-neutral-300 bg-transparent py-2 focus:border-black focus:outline-none text-sm"
-                            >
+                            <select name="budget" required className="mt-1 w-full border-b border-neutral-300 bg-transparent py-2 focus:border-black focus:outline-none text-sm">
                                 <option value="">Select budget</option>
                                 {budgetOptions.map((b, i) => (
                                     <option key={i} value={b}>{b}</option>
                                 ))}
                             </select>
                         </div>
-
                     </div>
 
-                    {/* Project Details (full width) */}
                     <div>
                         <label className="text-xs uppercase tracking-wider text-neutral-700">Project Details</label>
                         <textarea
+                            name="message"
                             required
                             rows={5}
                             className="mt-1 w-full border-b border-neutral-300 bg-transparent py-2 focus:border-black focus:outline-none text-sm"
@@ -134,11 +127,12 @@ export default function Enquiry() {
 
                     <button
                         type="submit"
-                        className="w-full border border-black py-3 text-sm tracking-wide hover:bg-gray-700  text-white transition-all bg-black"
+                        disabled={loading}
+                        className={`w-full border border-black py-3 text-sm tracking-wide transition-all 
+                            ${loading ? "bg-gray-400" : "bg-black hover:bg-gray-700 text-white"}`}
                     >
-                        {sent ? "Sent ✓" : "Send Request"}
+                        {loading ? "Sending..." : sent ? "Sent ✓" : "Send Request"}
                     </button>
-
 
                     <p className="text-[11px] text-neutral-500 text-center mt-4">No spam. No newsletter. Just a real reply.</p>
                 </form>
