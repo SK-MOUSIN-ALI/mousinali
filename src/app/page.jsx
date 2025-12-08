@@ -136,7 +136,7 @@ export default function Home() {
               <div className="w-1/2 text-center hero-text">
                 <h5 className="italic text-[#2B2B2B] font-weight-300">Hi It’s Mousin</h5>
                 <h1 className="font-weight-400 capitalize">
-                  UXX Designer crafting intuitive digital experiences
+                  UXXX Designer crafting intuitive digital experiences
                 </h1>
                 <p className="text-[#242424] font-weight-300">
                   Focused on clean design, user psychology, and impactful interactions for
